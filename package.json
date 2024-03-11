@@ -1,0 +1,16 @@
+{
+  "name": "codecopter",
+  "version": "1.0.0",
+  "description": "CodeCopter",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.25",
+    "typescript": "^5.4.2"
+  }
+}

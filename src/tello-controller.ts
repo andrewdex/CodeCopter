@@ -11,6 +11,10 @@ export class TelloController {
     this.telloPort = telloPort;
   }
 
+  async connected(): Promise<void> {
+    return this.sendCommand("command");
+  }
+
   async sendCommand(command: string): Promise<void> {
     return this.udpClient.send(command, this.telloPort, this.telloAddress);
   }
@@ -111,6 +115,10 @@ export class TelloController {
 
   async queryWifi(): Promise<void> {
     return this.sendCommand("wifi?"); // Signal strength
+  }
+
+  async battery(): Promise<void> {
+    return this.sendCommand("battery?");
   }
 
   close() {
